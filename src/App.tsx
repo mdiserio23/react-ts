@@ -21,10 +21,14 @@ function App() {
     ]);
   };
 
+  const onRemoveItemHandler = (id: string): void => {
+    setTodos((prevTodo) => prevTodo.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="App">
       <NewTodo onAddTodo={addToDoHandler} />
-      <Todos items={todos} />
+      <Todos items={todos} onRemoveItem={onRemoveItemHandler} />
     </div>
   );
 }
