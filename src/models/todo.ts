@@ -6,11 +6,8 @@ export interface ITodoComponent extends Todo {
   onRemoveItem: (id: string) => void;
 }
 
-export interface TodosComponent {
+export interface TodoContextInterface {
   items: Todo[];
   onRemoveItem: (id: string) => void;
-}
-
-export interface NewTodoComponent {
   onAddTodo: (text: string) => void;
 }
